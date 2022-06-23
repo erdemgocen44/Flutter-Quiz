@@ -19,7 +19,7 @@ class _QuestionWidgetState extends State<QuestionWidget> {
           height: MediaQuery.of(context).size.height * 0.1,
         ),
         Text('Soru $_questionNumber/${questions.length}'),
-        const Divider(thickness: 1, color: Colors.grey),
+        const Divider(thickness: 2, color: Colors.grey),
       ]),
     );
   }
