@@ -2,13 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:quiz/model.dart';
 
 Widget buildOption(BuildContext context, Option option) {
-  return Row(
-    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-    children: [
-      Text(
-        option.text,
-        style: const TextStyle(fontSize: 20),
-      )
-    ],
+  return Container(
+    height: MediaQuery.of(context).size.height * 0.1,
+    decoration: BoxDecoration(color: Colors.grey.shade200),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text(
+          option.text,
+          style: const TextStyle(fontSize: 20),
+        )
+      ],
+    ),
   );
 }
