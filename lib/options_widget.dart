@@ -10,7 +10,9 @@ class OptionsWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Column(
-        children: [],
+        children: question.options
+            .map((option) => buildOption(context, option))
+            .toList(),
       ),
     );
   }
