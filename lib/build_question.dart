@@ -10,7 +10,13 @@ Column buildQuestion(Question question) {
       Text(
         question.text,
         style: const TextStyle(fontSize: 25),
-      )
+      ),
+      const SizedBox(
+        height: 32,
+      ),
+      Expanded(
+        child: OptionsWidget(question: question),
+      ),
     ],
   );
 }
