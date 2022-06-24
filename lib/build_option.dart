@@ -48,6 +48,5 @@ Widget getIconForOption(Option option, Question question) {
     return const Icon(Icons.check_circle,color:Colors.green);
   }
     
-  } else {
-  }
+  } return const SizedBox.shrink();
 }
