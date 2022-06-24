@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:quiz/model.dart';
 
+import 'build_question.dart';
+
 class QuestionWidget extends StatefulWidget {
   const QuestionWidget({Key? key}) : super(key: key);
   @override
@@ -39,11 +41,4 @@ class _QuestionWidgetState extends State<QuestionWidget> {
       ),
     );
   }
-}
-
-Column buildQuestion(Question question) {
-  return Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: [],
-  );
 }
