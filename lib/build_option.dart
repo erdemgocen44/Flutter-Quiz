@@ -5,6 +5,7 @@ Widget buildOption(BuildContext context, Option option) {
   return Container(
     height: MediaQuery.of(context).size.height * 0.07,
     padding: const EdgeInsets.all(12),
+    margin: const EdgeInsets.symmetric(vertical: 8),
     decoration: BoxDecoration(color: Colors.grey.shade200),
     child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
