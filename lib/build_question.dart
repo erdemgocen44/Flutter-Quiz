@@ -16,7 +16,19 @@ Column buildQuestion(Question question) {
         height: 32,
       ),
       Expanded(
-        child: OptionsWidget(question: question),
+        child: OptionsWidget(
+          question: question,
+          onClickedOption: (option) {
+            if (question.isLocked) {
+              return;
+            } else {
+              setState(() {
+                question.isLocked = true;
+                question.selectedOption = option;
+              });
+            }
+          },
+        ),
       ),
     ],
   );
