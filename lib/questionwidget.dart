@@ -20,6 +20,13 @@ class _QuestionWidgetState extends State<QuestionWidget> {
         ),
         Text('Soru $_questionNumber/${questions.length}'),
         const Divider(thickness: 2, color: Colors.grey),
+        Expanded(
+            child: PageView.builder(
+          physics: const NeverScrollableScrollPhysics(),
+        )),
+        SizedBox(
+          height: MediaQuery.of(context).size.height * 0.01,
+        )
       ]),
     );
   }
