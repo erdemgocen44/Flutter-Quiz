@@ -14,20 +14,36 @@ class _QuestionWidgetState extends State<QuestionWidget> {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16),
-      child: Column(crossAxisAlignment: CrossAxisAlignment.end, children: [
-        SizedBox(
-          height: MediaQuery.of(context).size.height * 0.1,
-        ),
-        Text('Soru $_questionNumber/${questions.length}'),
-        const Divider(thickness: 2, color: Colors.grey),
-        Expanded(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.end,
+        children: [
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.1,
+          ),
+          Text('Soru $_questionNumber/${questions.length}'),
+          const Divider(thickness: 2, color: Colors.grey),
+          Expanded(
             child: PageView.builder(
-          physics: const NeverScrollableScrollPhysics(),
-        )),
-        SizedBox(
-          height: MediaQuery.of(context).size.height * 0.01,
-        )
-      ]),
+              physics: const NeverScrollableScrollPhysics(),
+              itemCount: questions.length,
+              itemBuilder: (context, index) {
+                final _question = questions[index];
+                return buildQuestion(_question);
+              },
+            ),
+          ),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.01,
+          )
+        ],
+      ),
     );
   }
+}
+
+Column buildQuestion(Question question) {
+  return Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [],
+  );
 }
